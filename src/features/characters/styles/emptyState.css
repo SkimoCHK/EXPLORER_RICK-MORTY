@@ -1,0 +1,32 @@
+.rm-empty {
+  margin-top: 32px;
+  padding: 56px 32px;
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(34, 197, 94, 0.08),
+    rgba(2, 6, 23, 0.95)
+  );
+
+  border: 1px dashed rgba(34, 197, 94, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.15);
+}
+
+.rm-empty .ant-empty-description {
+  color: #a7f3d0;
+  font-size: 15px;
+}
+
+.rm-empty-btn {
+  margin-top: 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+}

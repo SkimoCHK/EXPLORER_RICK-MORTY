@@ -1,0 +1,124 @@
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.character-card {
+  background: rgba(2, 6, 23, 0.85);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.character-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 35px rgba(34, 197, 94, 0.35);
+}
+
+.character-card:focus-visible {
+  outline: 2px solid #22c55e;
+  outline-offset: 4px;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.card-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #22c55e;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+}
+
+.character-name {
+  display: block;
+  color: #e5e7eb;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.character-gender {
+  display: block;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.status-tag {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.detail-btn {
+  display: inline-block;
+  margin-top: 4px;
+  color: #22c55e;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.character-card:hover .detail-btn {
+  text-decoration: underline;
+  color: #86efac;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .character-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .character-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .character-card {
+    padding: 18px 14px;
+  }
+
+  .card-image img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .character-card {
+    padding: 20px 16px;
+  }
+
+  .card-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .character-name {
+    font-size: 15px;
+  }
+}
